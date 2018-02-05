@@ -7,5 +7,23 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100 >
+        <ion-list >
+          <form (ngSubmit) ="saveForm()" >
+            <ion-item>
+                <ion-label fixed>City</ion-label>
+                  <ion-input type="text" [(ngModel)] ="city" name="city"  ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>State</ion-label>
+              <ion-input type="text" [(ngModel)] ="state" name="state"  ></ion-input>              
+            </ion-item>
+            <button type="submit" ion-button block >Save Change</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
